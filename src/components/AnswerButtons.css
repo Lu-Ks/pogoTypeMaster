@@ -1,0 +1,304 @@
+.answer-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 1rem auto;
+  padding: 0;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.answer-buttons.has-five {
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 1000px;
+}
+
+.answer-buttons.has-five .answer-btn:nth-child(1),
+.answer-buttons.has-five .answer-btn:nth-child(2),
+.answer-buttons.has-five .answer-btn:nth-child(3) {
+  grid-column: span 2;
+}
+
+.answer-buttons.has-five .answer-btn:nth-child(4) {
+  grid-column: 2 / 4;
+}
+
+.answer-buttons.has-five .answer-btn:nth-child(5) {
+  grid-column: 4 / 6;
+}
+
+.answer-btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1.25rem 1.5rem 1.25rem 1.5rem;
+  padding-top: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  will-change: transform;
+  min-height: 75px;
+}
+
+.answer-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.answer-btn:hover::before {
+  left: 100%;
+}
+
+.answer-btn:hover:not(:disabled) {
+  transform: scale(1.03);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.answer-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.answer-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.answer-btn.super-effective {
+  background: linear-gradient(135deg, #ff922b 0%, #e8590c 100%);
+  border-color: #ff922b;
+  box-shadow: 0 4px 12px rgba(255, 146, 43, 0.3);
+}
+
+.answer-btn.super-effective:hover:not(:disabled) {
+  box-shadow: 0 6px 20px rgba(255, 146, 43, 0.6);
+  background: linear-gradient(135deg, #ffa94d 0%, #fd7e14 100%);
+}
+
+.answer-btn.normal {
+  background: linear-gradient(135deg, #51cf66 0%, #2f9e44 100%);
+  border-color: #51cf66;
+  box-shadow: 0 4px 12px rgba(81, 207, 102, 0.3);
+}
+
+.answer-btn.normal:hover:not(:disabled) {
+  box-shadow: 0 6px 20px rgba(81, 207, 102, 0.6);
+  background: linear-gradient(135deg, #69db7c 0%, #37b24d 100%);
+}
+
+.answer-btn.not-very-effective {
+  background: linear-gradient(135deg, #4dabf7 0%, #1c7ed6 100%);
+  border-color: #4dabf7;
+  color: var(--text-light);
+  box-shadow: 0 4px 12px rgba(77, 171, 247, 0.3);
+}
+
+.answer-btn.not-very-effective:hover:not(:disabled) {
+  box-shadow: 0 6px 20px rgba(77, 171, 247, 0.6);
+  background: linear-gradient(135deg, #74c0fc 0%, #228be6 100%);
+}
+
+.answer-btn.not-very-effective .answer-shortcut {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.answer-btn.double-resist {
+  background: linear-gradient(135deg, #5f3dc4 0%, #4c2a9d 100%);
+  border-color: #5f3dc4;
+  box-shadow: 0 4px 12px rgba(95, 61, 196, 0.3);
+}
+
+.answer-btn.double-resist:hover:not(:disabled) {
+  box-shadow: 0 6px 20px rgba(95, 61, 196, 0.6);
+  background: linear-gradient(135deg, #7048e8 0%, #5f3dc4 100%);
+}
+
+.answer-btn.double-weakness {
+  background: linear-gradient(135deg, #c92a2a 0%, #a61e1e 100%);
+  border-color: #c92a2a;
+  box-shadow: 0 4px 12px rgba(201, 42, 42, 0.3);
+}
+
+.answer-btn.double-weakness:hover:not(:disabled) {
+  box-shadow: 0 6px 20px rgba(201, 42, 42, 0.6);
+  background: linear-gradient(135deg, #e03131 0%, #c92a2a 100%);
+}
+
+.answer-label {
+  font-size: 1rem;
+  letter-spacing: 0.6px;
+}
+
+.answer-multiplier {
+  font-size: 1.1rem;
+  font-weight: bold;
+  opacity: 0.95;
+}
+
+.answer-shortcut {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.8rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: monospace;
+  color: var(--text-light);
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .answer-buttons {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    max-width: 100%;
+  }
+
+  .answer-buttons.has-five {
+    grid-template-columns: 1fr;
+  }
+
+  .answer-buttons.has-five .answer-btn:nth-child(4),
+  .answer-buttons.has-five .answer-btn:nth-child(5) {
+    grid-column: 1;
+  }
+
+  .answer-btn {
+    padding: 0.75rem 1.5rem;
+    min-height: 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .answer-buttons {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin: 0.5rem auto;
+  }
+
+  .answer-buttons.has-five {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  /* Row 1: Super Effective, Normal, Not Very Effective - each takes 2 columns */
+  .answer-buttons.has-five .answer-btn:nth-child(1) {
+    grid-column: 1 / 3;
+  }
+
+  .answer-buttons.has-five .answer-btn:nth-child(2) {
+    grid-column: 3 / 5;
+  }
+
+  .answer-buttons.has-five .answer-btn:nth-child(3) {
+    grid-column: 5 / 7;
+  }
+
+  /* Row 2: Double Weakness and Double Resist - each takes 3 columns */
+  .answer-buttons.has-five .answer-btn:nth-child(4) {
+    grid-column: 1 / 4;
+  }
+
+  .answer-buttons.has-five .answer-btn:nth-child(5) {
+    grid-column: 4 / 7;
+  }
+
+  .answer-btn {
+    padding: 0.6rem 0.75rem;
+    padding-top: 1.25rem;
+    min-height: 48px;
+    border-radius: 14px;
+  }
+
+  .answer-label {
+    font-size: 0.85rem;
+  }
+
+  .answer-multiplier {
+    font-size: 0.9rem;
+  }
+
+  .answer-shortcut {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .answer-buttons {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+    margin: 0.4rem auto;
+  }
+
+  .answer-buttons.has-five {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  /* Row 1: Super Effective, Normal, Not Very Effective - each takes 2 columns */
+  .answer-buttons.has-five .answer-btn:nth-child(1) {
+    grid-column: 1 / 3;
+  }
+
+  .answer-buttons.has-five .answer-btn:nth-child(2) {
+    grid-column: 3 / 5;
+  }
+
+  .answer-buttons.has-five .answer-btn:nth-child(3) {
+    grid-column: 5 / 7;
+  }
+
+  /* Row 2: Double Weakness and Double Resist - each takes 3 columns */
+  .answer-buttons.has-five .answer-btn:nth-child(4) {
+    grid-column: 1 / 4;
+  }
+
+  .answer-buttons.has-five .answer-btn:nth-child(5) {
+    grid-column: 4 / 7;
+  }
+
+  .answer-btn {
+    padding: 0.45rem 0.4rem;
+    padding-top: 0.45rem;
+    gap: 0.15rem;
+    min-height: 38px;
+    border-radius: 10px;
+    border-width: 2px;
+  }
+
+  .answer-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1px;
+  }
+
+  .answer-multiplier {
+    font-size: 0.75rem;
+  }
+
+  .answer-shortcut {
+    display: none;
+  }
+}

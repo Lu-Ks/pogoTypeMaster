@@ -1,130 +1,87 @@
-# Pokémon Type Master 🎮
+# Pokémon GO Type Master ⚔️🛡️
 
-An engaging, gaming-focused web application that tests your knowledge of Pokémon type effectiveness matchups. Built with React, TypeScript, and Vite.
+A web application to practice and master Pokémon GO type effectiveness. Test your knowledge with quick quizzes and challenge yourself in Chrono Mode!
 
-![Pokémon Type Master](./public/pokeball.svg)
+**[Play Now →](https://lu-ks.github.io/pogoTypeMaster/)**
 
-## 🎯 Features
+## ✨ Features
 
-- **Immersive Gaming Experience**: Polished UI with smooth animations and visual feedback
-- **Score Tracking**: Real-time score, streak counter, and accuracy statistics
-- **18 Pokémon Types**: Complete type chart with all type effectiveness matchups
-- **Persistent Progress**: Your stats are saved automatically using localStorage
-- **Responsive Design**: Works beautifully on desktop and mobile devices
-- **Streak Bonuses**: Earn bonus points for consecutive correct answers
+### Game Modes
+
+- **Classic Mode**: Learn at your own pace with optional feedback overlay
+- **Chrono Mode**: Race against the clock! Answer as many questions as possible in 60 seconds
+  - Choose between Single Type, Dual Type, or Both
+  - Track your accuracy, streak, and review your history
+
+### Gameplay
+
+- **18 Pokémon Types**: Complete type chart based on Pokémon GO mechanics
+- **Single & Dual Type**: Practice with single-type or dual-type defenders
+- **Keyboard Shortcuts**: Customizable shortcuts for fast answers
+- **Score & Streak Tracking**: Build streaks for bonus points
+- **History Panel**: Review your recent answers and learn from mistakes
+- **Persistent Progress**: Stats saved automatically in your browser
+
+### Polish
+
+- Modern, responsive UI that works on desktop and mobile
+- Smooth animations and visual feedback
+- Dark theme optimized for comfortable gameplay
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### Play Online
 
-- Node.js (v16 or higher)
-- npm or yarn
+Visit **[https://lu-ks.github.io/pogoTypeMaster/](https://lu-ks.github.io/pogoTypeMaster/)**
 
-### Installation
-
-1. Clone the repository:
+### Run Locally
 
 ```bash
-git clone <your-repo-url>
-cd pogoweakV2
-```
+# Clone the repository
+git clone https://github.com/Lu-Ks/pogoTypeMaster.git
+cd pogoTypeMaster
 
-2. Install dependencies:
-
-```bash
+# Install dependencies
 npm install
-```
 
-3. Start the development server:
-
-```bash
+# Start development server
 npm run dev
 ```
 
-4. Open your browser and navigate to `http://localhost:5173`
+Open `http://localhost:5173` in your browser.
 
 ## 🎮 How to Play
 
-1. You'll be presented with two Pokémon types: an **attacking type** and a **defending type**
+1. You'll see an **attacking type** and a **defending type** (single or dual)
 2. Choose the correct effectiveness:
-   - **Super Effective** (2x damage)
-   - **Normal** (1x damage)
-   - **Not Very Effective** (0.5x damage)
-   - **No Effect** (0x damage)
-3. Build up your streak to earn bonus points!
-4. Try to beat your best streak and improve your accuracy
+   - **Super Effective** (×1.6 in Pokémon GO)
+   - **Normal** (×1)
+   - **Not Very Effective** (×0.625)
+   - In dual type mode: **Double Weakness** (×2.56) or **Double Resist** (×0.39)
+3. Build your streak for bonus points!
+4. Use keyboard shortcuts for faster answers
 
-## 🛠️ Built With
+## 🛠️ Tech Stack
 
-- **React** - UI library
-- **TypeScript** - Type safety
-- **Vite** - Build tool and dev server
-- **CSS3** - Styling with animations
-
-## 📁 Project Structure
-
-```
-pogoweakV2/
-├── src/
-│   ├── components/
-│   │   ├── TypeCard.tsx
-│   │   ├── ScoreDisplay.tsx
-│   │   ├── AnswerButtons.tsx
-│   │   └── FeedbackOverlay.tsx
-│   ├── gameData.ts       # Type chart and colors
-│   ├── gameUtils.ts      # Game logic
-│   ├── types.ts          # TypeScript definitions
-│   ├── App.tsx           # Main app component
-│   ├── App.css
-│   ├── main.tsx
-│   └── index.css
-├── public/
-│   └── pokeball.svg
-├── index.html
-└── package.json
-```
-
-## 🎨 Features in Detail
-
-### Type Effectiveness System
-
-- Comprehensive type chart covering all 18 Pokémon types
-- Accurate effectiveness calculations based on official Pokémon games
-
-### Scoring System
-
-- Base score: 100 points per correct answer
-- Streak bonus: Up to 200 additional points
-- Tracks best streak and overall accuracy
-
-### Visual Design
-
-- Gaming-focused aesthetic with vibrant colors
-- Smooth animations and transitions
-- Visual feedback for correct/incorrect answers
-- Responsive layout for all screen sizes
+- **React 18** + **TypeScript**
+- **Vite** for fast development and builds
+- **CSS3** with custom properties and animations
+- **GitHub Pages** for hosting
 
 ## 📝 Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start development server |
+| `npm run build`   | Build for production     |
+| `npm run preview` | Preview production build |
+| `npm run lint`    | Run ESLint               |
 
-## 🔮 Future Enhancements
+## � License
 
-- Sound effects and background music
-- Multiple difficulty levels
-- Timed challenges
-- Leaderboard system
-- Dual-type effectiveness questions
-- Different game modes
+MIT License - feel free to use and modify!
 
-## 📄 License
+## 🙏 Credits
 
-This project is open source and available under the MIT License.
-
-## 🙏 Acknowledgments
-
-- Pokémon type effectiveness data from the official Pokémon games
-- Inspired by the Pokémon franchise by Game Freak and Nintendo
+- Type effectiveness data based on Pokémon GO game mechanics
+- Pokémon is a trademark of Nintendo/Game Freak

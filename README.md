@@ -2,7 +2,7 @@
 
 A web application to practice and master Pokémon GO type effectiveness. Test your knowledge with quick quizzes and challenge yourself in Chrono Mode!
 
-**[Play Now →](https://lu-ks.github.io/pogoTypeMaster/)**
+**[Play Now →](https://pogotype.lu-ks.dev/)**
 
 ## ✨ Features
 
@@ -32,7 +32,7 @@ A web application to practice and master Pokémon GO type effectiveness. Test yo
 
 ### Play Online
 
-Visit **[https://lu-ks.github.io/pogoTypeMaster/](https://lu-ks.github.io/pogoTypeMaster/)**
+Visit **[https://pogotype.lu-ks.dev/](https://pogotype.lu-ks.dev/)**
 
 ### Run Locally
 

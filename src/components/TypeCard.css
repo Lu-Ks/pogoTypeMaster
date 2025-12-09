@@ -77,6 +77,30 @@
   letter-spacing: 1.5px;
 }
 
+@media (max-width: 1200px) {
+  .type-card {
+    min-width: 140px;
+    max-width: 170px;
+    min-height: 170px;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .type-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .type-name {
+    font-size: 1.2rem;
+  }
+
+  .type-label {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.6rem;
+  }
+}
+
 @media (max-width: 768px) {
   .type-card {
     min-width: 100px;
@@ -189,5 +213,54 @@
     padding: 0.05rem 0.25rem;
     top: -6px;
     letter-spacing: 0.1px;
+  }
+}
+
+/* Height-based media queries for shorter screens (laptops) */
+@media (max-height: 800px) {
+  .type-card {
+    min-width: 140px;
+    max-width: 160px;
+    min-height: 160px;
+    padding: 0.75rem;
+    gap: 0.4rem;
+  }
+
+  .type-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .type-name {
+    font-size: 1.1rem;
+  }
+
+  .type-label {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .type-card {
+    min-width: 110px;
+    max-width: 130px;
+    min-height: 130px;
+    padding: 0.5rem;
+    gap: 0.3rem;
+  }
+
+  .type-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .type-name {
+    font-size: 0.95rem;
+  }
+
+  .type-label {
+    font-size: 0.55rem;
+    padding: 0.1rem 0.4rem;
+    top: -8px;
   }
 }
